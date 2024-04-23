@@ -10,7 +10,7 @@ const Counter = () => {
     const incrementHandler = () => {
         setErrorMessage('');
         if (counter === 40) {
-            setErrorMessage('Maximum value reached');
+            setErrorMessage('Error! Maximum value reached');
             return;
         }
         setCounter(prevCounter => restrictCounter(prevCounter + 1));
@@ -19,7 +19,7 @@ const Counter = () => {
     const decrementHandler = () => {
         setErrorMessage('');
         if (counter === 0) {
-            setErrorMessage('Minimum value reached');
+            setErrorMessage('Error! Minimum value reached');
             return;
         }
         setCounter(prevCounter => restrictCounter(prevCounter - 1));
@@ -27,7 +27,7 @@ const Counter = () => {
   return (
     <div className='container text-center counter_wrap'>
         <h1>Counter App</h1>
-        {errorMessage != '' && <div style={{ color: 'red' }}>{errorMessage}</div>}
+        {errorMessage != '' && <div><span className='errorStyles'>{errorMessage}</span></div>}
         <strong>{counter}</strong>
         <div className='d-flex flex-wrap align-center justify-center gap-55'>
             <button className='counterBtn' onClick={decrementHandler}>-</button>
