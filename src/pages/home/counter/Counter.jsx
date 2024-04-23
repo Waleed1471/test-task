@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Counter.css'
+import CounterButton from '../../../components/buttons/counterButton/CounterButton';
 const Counter = () => {
     const [counter, setCounter] = useState(0);
     const [errorMessage, setErrorMessage] = useState('');
@@ -24,17 +25,24 @@ const Counter = () => {
         }
         setCounter(prevCounter => restrictCounter(prevCounter - 1));
     };
-  return (
-    <div className='container text-center counter_wrap'>
-        <h1>Counter App</h1>
-        {errorMessage != '' && <div><span className='errorStyles'>{errorMessage}</span></div>}
-        <strong>{counter}</strong>
-        <div className='d-flex flex-wrap align-center justify-center gap-55'>
-            <button className='counterBtn' onClick={decrementHandler}>-</button>
-            <button className='counterBtn' onClick={incrementHandler}>+</button>
+    return (
+        <div className='container text-center counter_wrap'>
+            <h1>Counter App</h1>
+            {errorMessage !== '' && <div><span className='errorStyles'>{errorMessage}</span></div>}
+            <strong>{counter}</strong>
+            <div className='d-flex flex-wrap align-center justify-center gap-55'>
+                <CounterButton properties={{
+                    handler: decrementHandler,
+                    type: "-",
+                }} />
+                <CounterButton properties={{
+                    handler: incrementHandler,
+                    type: "+",
+                }} />
+
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Counter

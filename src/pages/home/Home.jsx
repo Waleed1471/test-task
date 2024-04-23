@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
-import { BackButton } from '../../component/buttons/backButton/BackButton';
+import { BackButton } from '../../components/buttons/backButton/BackButton';
 import './Home.css'
-import TaskCard from '../../component/taskCard/TaskCard';
+import TaskCard from '../../components/taskCard/TaskCard';
 
 export const Home = () => {
     let location = useLocation();
