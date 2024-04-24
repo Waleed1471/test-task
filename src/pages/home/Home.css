@@ -2,7 +2,7 @@
 *{box-sizing: border-box;font-family: "Poppins", sans-serif;}
 body{padding: 20px 0px;font-size: 16px;background-color: #f7f7f7;}
 h1{color:#f25500;}
-.container{max-width: 1200px;margin: auto;width: 100%;}
+.container{max-width: 1200px;margin: auto;width:95%;}
 .d-flex{display: flex;}
 .flex-wrap{flex-wrap: wrap;}
 .gap-55{gap: 55px;}

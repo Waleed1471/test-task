@@ -14,7 +14,7 @@ export const Home = () => {
         },
         {
             url: "/reverse-string",
-            title: "Reverse String Task",
+            title: "Reverse String",
         },
         {
             url: "/weather",
